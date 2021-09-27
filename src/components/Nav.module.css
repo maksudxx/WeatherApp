@@ -1,0 +1,38 @@
+.link {
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+
+.link:hover {
+  text-decoration: none;
+  color: rgb(28, 241, 56);
+}
+
+.container{
+  border-bottom: 3px solid white;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+
+}
+
+@media (max-width: 550px){
+  .container{
+    display: table-cell;
+    border-bottom:none;
+    
+  }
+
+  .link{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    border-bottom:2px solid white;
+    padding:5px;
+    height: 50px;
+  }
+}
+

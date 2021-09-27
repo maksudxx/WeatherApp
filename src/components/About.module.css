@@ -1,0 +1,25 @@
+.title{
+    margin-bottom: 20px;
+}
+
+.parrafo{
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+.link{
+    color: rgb(0, 0, 0);
+}
+
+.link:hover{
+    color: black;
+}
+
+.contacto {
+    font-size: 1.5rem;
+    margin-bottom: 15px;  
+}
+
+.a{
+    color: white;
+}
