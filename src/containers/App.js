@@ -15,7 +15,7 @@ function App() {
   function onSearch(ciudad) {
     const API = "2bce5d36d238bebc2bd87a2755bb8b7a";
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API}&units=metric`
     )
       .then((r) => r.json())
       .then((recurso) => {
