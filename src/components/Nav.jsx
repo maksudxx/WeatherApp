@@ -10,10 +10,10 @@ function Nav({onSearch}) {
       <Link to="/" className={styles.link}>
         <span className={styles.title}>Weather App</span>
       </Link>
+      <SearchBar onSearch={onSearch} />
       <Link to="/about" className={styles.link}>
         <span>About</span>
       </Link>
-      <SearchBar onSearch={onSearch} />
     </nav>
   );
 };

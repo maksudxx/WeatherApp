@@ -1,5 +1,5 @@
 .link {
-  color: white;
+  color:black;
   font-size: 1.5rem;
   padding: 20px;
 }
@@ -13,9 +13,11 @@
 .container{
   border-bottom: 3px solid white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 70px;
   align-items: center;
+  background-color: greenyellow;
+ 
 
 }
 
