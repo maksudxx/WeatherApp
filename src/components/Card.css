@@ -1,23 +1,103 @@
 .card {
-  margin: 20px;
   width: 18rem;
-  background-color: rgba(3, 128, 145, 0.836);
-  border: 20px solid white;
-  border-radius: 40px
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-body {
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-title {
-  margin-bottom: 15px;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #closeIcon {
   display: flex;
   justify-content: flex-end;
-  margin-right: 8px;
-  margin-top: 8px;
+  padding: 12px 12px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
-.card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
+.btn-danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background: var(--danger);
+  color: white;
+  transform: rotate(90deg);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+.weather-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.temp-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.temp-value {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.iconoClima {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.card:hover .iconoClima {
+  transform: scale(1.1);
 }

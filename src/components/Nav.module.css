@@ -1,45 +1,59 @@
-.link {
-  color:black;
-  font-size: 1.5rem;
-  padding: 20px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 80px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.brandNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
 
 .link:hover {
-  text-decoration: none;
-  color: rgb(28, 241, 56);
+  color: var(--text-main);
+  text-shadow: 0 0 8px rgba(248, 250, 252, 0.4);
 }
 
-.container{
-  border-bottom: 3px solid white;
-  display: flex;
-  justify-content: space-around;
-  height: 70px;
-  align-items: center;
-  background-color: greenyellow;
-  font-family: 'Bakbak One', cursive;
- 
-
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #a78bfa, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
 }
 
-@media (max-width: 550px){
-  .container{
-    display: flex;
+@media (max-width: 768px){
+  .container {
     flex-wrap: wrap;
-    align-items: center;
-    border-bottom:none;
     height: auto;
-    justify-content: space-around
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
   }
 
-  .link{
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    border-bottom:3x solid rgb(5, 5, 5);
-    padding:5px;
-    height: 50px;
-    
+  .brandNav {
+    width: 100%;
+    justify-content: space-around;
   }
 }
-
