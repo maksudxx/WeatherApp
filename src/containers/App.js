@@ -5,15 +5,14 @@ import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
 import About from "../components/About.jsx";
 import City from "../components/City.jsx";
-
-
 function App() {
   const [cities, setCities] = useState([]);
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
   }
   function onSearch(ciudad) {
-    const API = "2bce5d36d238bebc2bd87a2755bb8b7a";
+    const API = process.env.REACT_APP_WEATHER_API;
+    if (!ciudad) return;
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API}&units=metric`
     )
@@ -60,8 +59,6 @@ function App() {
     <div className="App">
       <Route path="/">
         <Nav onSearch={onSearch} />
-        <br />
-        <br />
       </Route>
       <Route path="/about">
         <About />
@@ -75,13 +72,9 @@ function App() {
           <p className="mensaje">Sin ciudades, Puedes ver el clima de una ciudad desde el buscador</p>
         )}
       </Route>
-      {/* <Route exact path="/ciudad/:ciudadId">
-         {({match}) => <City city={onFilter(match.params.idCiudad)} />}
-      </Route> */}
       <Route
         exact
         path="/ciudad/:idCiudad"
-        // cunando se manda props se usa el render sino usar el component
         render={({ match }) => <City city={onFilter(match.params.idCiudad)} />}
       />
     </div>
